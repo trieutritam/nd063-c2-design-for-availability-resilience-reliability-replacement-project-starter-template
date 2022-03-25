@@ -1,0 +1,11 @@
+* For a single AZ outage
+- Minimum RTO
+The RTO is the time it takes to make the standby instance become primary. So the RTO around 2-5 minutes.
+- Minimum RPO
+Data is persisted to standby instance on write, so the RPO is 0 minute.
+
+* For a single region outage
+- Minimum RTO
+The RTO will be the time to promote the replica. This is around 5 minutes.
+- Minimum RPO
+Data is asynchronous to region, so the RPO is around 10 minutes
